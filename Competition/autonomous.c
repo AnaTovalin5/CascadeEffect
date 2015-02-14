@@ -46,9 +46,12 @@ void initializeRobot()
   	motor[tredLeft] = 0;
 	motor[tredRight] = 0;
 	motor[scissorLift] = 0;
-	servo[scoopDoor] = 58;
+	nMotorEncoderTarget[scissorLift] = 0;
+	nMotorEncoder[scissorLift] = 0;
+	servo[scoopDoor] = 180;
 	servo[goalLatch] = 143;
-
+	servo[sbodArm] = 81;
+	servo[SBOD] = 127;
   return;
 }
 
@@ -87,36 +90,6 @@ task main()
 	motor[tredLeft] = 0;
   	motor[tredRight] = 0;
   	wait1Msec(2500);
-
-		//nMotorEncoder[tredRight] = 0;
-	 //   nMotorEncoder[tredRight] = 2880;
-	 //   motor[tredRight] = 50;
-	 //   while(nMotorRunState[tredRight] != runStateIdle) {+
-	 //   }
-		//nMotorEncoder[tredLeft] = 0;
-	 //   nMotorEncoder[tredLeft] = 2880;
-	 //   motor[tredLeft] = 50;
-	 //   while(nMotorRunState[tredLeft] != runStateIdle) {
-	 //   }
-
-	//while(nMotorEncoder[tredLeft] < 75 && nMotorEncoder[tredRight] < 75) {
-	//	motor[tredLeft] = 50;
- //		motor[tredRight] = 50;
- // 		wait1Msec(2000);
-	//}
-
-	//nMotorEncoder[tredLeft] = 0;
- // 	nMotorEncoder[tredRight] = 0;
-
-	//motor[tredLeft] = 0;
- //	motor[tredRight] = 0;
- // 	wait1Msec(2000);
-
-	//motor[tredLeft] = 0;
- //	motor[tredRight] = 0;
- // 	wait1Msec(2000);
-
-
 
   while (true)
   {}
